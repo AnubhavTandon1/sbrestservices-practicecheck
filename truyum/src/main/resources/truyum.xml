@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<bean class="com.cognizant.truyum.model.MenuItem" id="pasta">
+<property value="1" name="id"/>
+<property value="Pasta" name="name"/>
+<property value="149" name="price"/>
+<property value="true" name="active"/>
+<property value="10/11/2009" name="dateOfLaunch"/>
+<property value="Snacks" name="category"/>
+<property value="true" name="freeDelivery"/>
+</bean>
+<bean class="com.cognizant.truyum.model.MenuItem" id="momos">
+<property value="1" name="id"/>
+<property value="Momos" name="name"/>
+<property value="99" name="price"/>
+<property value="true" name="active"/>
+<property value="16/07/2010" name="dateOfLaunch"/>
+<property value="Chinese" name="category"/>
+<property value="false" name="freeDelivery"/>
+</bean><bean class="com.cognizant.truyum.model.MenuItem" id="noodles">
+<property value="1" name="id"/>
+<property value="Noodles" name="name"/>
+<property value="80" name="price"/>
+<property value="false" name="active"/>
+<property value="25/09/2011" name="dateOfLaunch"/>
+<property value="Chinese" name="category"/>
+<property value="true" name="freeDelivery"/>
+</bean><bean class="com.cognizant.truyum.model.MenuItem" id="burger">
+<property value="1" name="id"/>
+<property value="Burger" name="name"/>
+<property value="151" name="price"/>
+<property value="true" name="active"/>
+<property value="11/02/2014" name="dateOfLaunch"/>
+<property value="Snacks" name="category"/>
+<property value="true" name="freeDelivery"/>
+</bean><bean class="com.cognizant.truyum.model.MenuItem" id="fries">
+<property value="1" name="id"/>
+<property value="Fries" name="name"/>
+<property value="199" name="price"/>
+<property value="true" name="active"/>
+<property value="19/02/2011" name="dateOfLaunch"/>
+<property value="Starters" name="category"/>
+<property value="true" name="freeDelivery"/>
+</bean>
+
+<bean class="java.util.ArrayList" id="menuItemList">
+<constructor-arg>
+<list>
+<ref bean="pasta"/>
+<ref bean="momos"/>
+<ref bean="noodles"/>
+<ref bean="burger"/>
+<ref bean="fries"/>
+</list>
+</constructor-arg>
+</bean>
+</beans>
